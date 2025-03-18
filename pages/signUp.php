@@ -29,7 +29,7 @@
         </nav>
         <div class="user-menu">
             <a href="signIn.html">Sign In</a>
-            <a href="signUp.html" class="active">Sign Up</a>
+            <a href="signUp.php" class="active">Sign Up</a>
             <a href="#"><i class="fas fa-shopping-cart"></i> Cart</a>
         </div>
     </header>
@@ -47,7 +47,16 @@
     <main class="main-content">
         <div class="auth-container">
             <h2>Create an Account</h2>
-            <form class="auth-form">
+            <?php
+            // যদি কোনো মেসেজ থাকে তাহলে দেখানো
+            if (isset($_GET['message'])) {
+                echo "<p style='color: green;'>" . htmlspecialchars($_GET['message']) . "</p>";
+            }
+            if (isset($_GET['error'])) {
+                echo "<p style='color: red;'>" . htmlspecialchars($_GET['error']) . "</p>";
+            }
+            ?>
+            <form class="auth-form" action="process_signup.php" method="POST">
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter your full name" required>
@@ -62,7 +71,7 @@
                 </div>
                 <div class="form-group">
                     <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                    <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm your password" required>
                 </div>
                 <div class="form-group checkbox-group">
                     <label><input type="checkbox" name="terms" required> I agree to the <a href="#">Terms & Conditions</a></label>

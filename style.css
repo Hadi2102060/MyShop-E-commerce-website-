@@ -189,7 +189,7 @@ body {
     text-decoration: none;
 }
 
-/* Contact Form Section */
+
 .contact-container {
     display: flex;
     gap: 40px;
@@ -254,7 +254,7 @@ body {
     background-color: #f0a944;
 }
 
-/* Products Page Styles */
+
 .breadcrumbs {
     margin: 10px 0;
     font-size: 14px;
@@ -419,7 +419,7 @@ body {
     background-color: #f7f7f7;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .contact-container {
         flex-direction: column;
@@ -468,7 +468,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Authentication Form */
+
 .auth-form {
     display: flex;
     flex-direction: column;
@@ -553,7 +553,7 @@ body {
     color: #febd69;
 }
 
-/* Responsive Design for Auth Pages */
+
 @media (max-width: 768px) {
     .auth-container {
         max-width: 90%;
